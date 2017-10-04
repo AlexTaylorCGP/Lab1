@@ -5,12 +5,12 @@
 
 int main() {
 	srand(time(nullptr));
-	int iRandomNumber = rand() % 100 + 1;
+	int iRandomNumber = rand() % 1000 + 1;
 	int iGuess;
 	std::string guess;
 	bool valid = false;
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 8; i++) {
 		valid = false;
 		std::cout << "please enter guess" << std::endl;
 
@@ -28,8 +28,8 @@ int main() {
 
 		if (iRandomNumber == iGuess) {
 			std::cout << " your guess of " << iGuess << " was correct the random number was " << iRandomNumber << std::endl;
-			i = 5;
-		} else if(i == 4) {
+			i = 8;
+		} else if(i == 7) {
 			std::cout << " your guess of " << iGuess << " was incorrect the correct answer was " << iRandomNumber << std::endl;
 		} else {
 			std::cout << " your guess of " << iGuess << " was incorrect the number to guess is ";
