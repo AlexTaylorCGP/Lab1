@@ -9,13 +9,15 @@ int main() {
 	int iGuess;
 	std::string guess;
 	bool valid = false;
-	for (int i = 0; i <= 5; i++) {
+
+	for (int i = 0; i < 5; i++) {
 		valid = false;
 		std::cout << "please enter guess" << std::endl;
+
 		while (!valid) {
 			std::cin >> guess;
-			
-			if (std::stoi(guess) > -1 && std::stoi(guess) < 101 && isalnum(std::stoi(guess))) {
+
+			if (std::stoi(guess) > 0 && std::stoi(guess) < 101) {
 				iGuess = std::stoi(guess);
 				valid = true;
 			} else {
@@ -35,7 +37,7 @@ int main() {
 					std::cout << "higher you have "; 
 				}
 				else {
-					std::cout << "lower you have";
+					std::cout << "lower you have ";
 				}
 				std::cout << 4 - i << " guesses remaining " << std::endl;
 		}
